@@ -1,0 +1,112 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good afternoon"],
+      "responses": [
+        "Hello! How can I help you with Al-Hikmah University today?",
+        "Hi there! What information do you need about Al-Hikmah University?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you", "Goodbye", "Quit"],
+      "responses": ["Goodbye! Have a great day!", "See you later!"]
+    },
+    {
+      "tag": "admissions_requirements",
+      "patterns": [
+        "What are the admission requirements?",
+        "How can I get admitted?",
+        "Admission criteria",
+        "Entry requirements"
+      ],
+      "responses": [
+        "Applicants must have at least five O'level credits including Mathematics and English. Some courses may have additional requirements."
+      ]
+    },
+    {
+      "tag": "courses",
+      "patterns": [
+        "What courses are offered?",
+        "List of courses",
+        "Programs available",
+        "Departments and courses"
+      ],
+      "responses": [
+        "You can find all the courses and programs on the university website. They include programs in Sciences, Arts, and Engineering."
+      ]
+    },
+    {
+      "tag": "registration",
+      "patterns": [
+        "How do I register for courses?",
+        "Course registration process",
+        "Register for classes"
+      ],
+      "responses": [
+        "Course registration is done through the student portal. Make sure your prerequisites and payments are complete."
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "What are the school fees?",
+        "Tuition fees",
+        "How much is the school fees?",
+        "Payment information"
+      ],
+      "responses": [
+        "Tuition fees vary by program. You can view the detailed fee structure on your student portal."
+      ]
+    },
+    {
+      "tag": "hostel",
+      "patterns": [
+        "How to apply for hostel?",
+        "Accommodation",
+        "Hostel information",
+        "Student housing"
+      ],
+      "responses": [
+        "You can apply for hostel accommodation via the student services section on the portal. Apply early due to limited rooms."
+      ]
+    },
+    {
+      "tag": "academic_calendar",
+      "patterns": [
+        "Academic calendar",
+        "Semester dates",
+        "Exams schedule",
+        "Holidays"
+      ],
+      "responses": [
+        "The academic calendar, including semester dates and exam periods, is published on the university website."
+      ]
+    },
+    {
+      "tag": "scholarship",
+      "patterns": [
+        "Scholarships available",
+        "Financial aid",
+        "Bursaries",
+        "Grants"
+      ],
+      "responses": [
+        "Al-Hikmah University offers scholarships for eligible students. Check the student portal for application details."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "University contact",
+        "Phone number",
+        "Email",
+        "How can I reach the university?"
+      ],
+      "responses": [
+        "You can contact Al-Hikmah University at info@alhikmah.edu.ng or check the website for departmental phone numbers."
+      ]
+    }
+  ]
+}
