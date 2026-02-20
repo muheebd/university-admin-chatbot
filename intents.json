@@ -53,7 +53,6 @@
       "patterns": [
         "What are the school fees?",
         "Tuition fees",
-        "How much is the school fees?",
         "Payment information"
       ],
       "responses": [
@@ -64,7 +63,6 @@
       "tag": "hostel",
       "patterns": [
         "How to apply for hostel?",
-        "Accommodation",
         "Hostel information",
         "Student housing"
       ],
@@ -107,6 +105,61 @@
       "responses": [
         "You can contact Al-Hikmah University at info@alhikmah.edu.ng or check the website for departmental phone numbers."
       ]
+    },
+    {
+      "tag": "check_fees",
+      "patterns": [
+        "How much is my school fees?",
+        "What is my fee balance?",
+        "Do I have an outstanding payment?",
+        "Check my tuition balance",
+        "Why did my enrolment fail?"
+      ],
+      "responses": ["ACTION_AUTH_REQUIRED"]
+    },
+    {
+      "tag": "check_payment_history",
+      "patterns": [
+        "Show me my last payment",
+        "Payment history",
+        "Did my sundry fee payment go through?",
+        "Get my payment receipt",
+        "Print my receipt"
+      ],
+      "responses": ["ACTION_AUTH_REQUIRED"]
+    },
+    {
+      "tag": "check_courses",
+      "patterns": [
+        "What courses am I registered for?",
+        "Check my course registration",
+        "Extra unit registration status",
+        "List my courses",
+        "Did they approve my extra unit?"
+      ],
+      "responses": ["ACTION_AUTH_REQUIRED"]
+    },
+    {
+      "tag": "check_accommodation",
+      "patterns": [
+        "Did I get a hostel?",
+        "What is my room number?",
+        "Check my accommodation status",
+        "Hostel allocation",
+        "Where is my bed space?"
+      ],
+      "responses": ["ACTION_AUTH_REQUIRED"]
+    },
+    {
+      "tag": "check_results",
+      "patterns": [
+        "What is my CGPA?",
+        "Check my results",
+        "What was my GPA last semester?",
+        "Semester grades",
+        "Did my results drop?"
+      ],
+      "responses": ["ACTION_AUTH_REQUIRED"]
     }
   ]
 }

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al-Hikmah Admin Support</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e9ecef;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #chat-container {
+        width: 450px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      #header {
+        background: #00563b; /* Al-Hikmah Green */
+        color: white;
+        padding: 18px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+      #chat-box {
+        height: 450px;
+        padding: 20px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background: #f8f9fa;
+      }
+      .message {
+        padding: 12px 16px;
+        border-radius: 18px;
+        max-width: 75%;
+        font-size: 15px;
+        line-height: 1.5;
+        word-wrap: break-word;
+      }
+      .bot-msg {
+        background: #d1e7dd;
+        color: #0f5132;
+        align-self: flex-start;
+        border-bottom-left-radius: 2px;
+      }
+      .user-msg {
+        background: #00563b;
+        color: white;
+        align-self: flex-end;
+        border-bottom-right-radius: 2px;
+      }
+      #input-area {
+        display: flex;
+        border-top: 1px solid #dee2e6;
+        background: white;
+        padding: 10px;
+      }
+      #user-input {
+        flex: 1;
+        padding: 12px;
+        border: 1px solid #ced4da;
+        border-radius: 20px;
+        outline: none;
+        font-size: 15px;
+      }
+      #user-input:focus {
+        border-color: #00563b;
+      }
+      #send-btn {
+        background: #00563b;
+        color: white;
+        border: none;
+        padding: 0 20px;
+        margin-left: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+      #send-btn:hover {
+        background: #003d2a;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chat-container">
+      <div id="header">🎓 Al-Hikmah Admin Assistant</div>
+      <div id="chat-box">
+        <div class="message bot-msg">
+          Hello! I am the Al-Hikmah Intelligent Administrative Assistant. How
+          can I help you today?
+        </div>
+      </div>
+      <div id="input-area">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Type your question here..."
+          autocomplete="off"
+        />
+        <button id="send-btn" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <script>
+      function sendMessage() {
+        let inputField = document.getElementById('user-input');
+        let message = inputField.value.trim();
+        if (message === '') return;
+
+        let chatBox = document.getElementById('chat-box');
+
+        // Display User Message
+        chatBox.innerHTML += `<div class="message user-msg">${message}</div>`;
+        inputField.value = '';
+
+        // Auto-scroll to the bottom
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        // Send to Flask Backend
+        fetch('/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: message }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            // Display Bot Message
+            chatBox.innerHTML += `<div class="message bot-msg">${data.reply}</div>`;
+            // Auto-scroll to the bottom again
+            chatBox.scrollTop = chatBox.scrollHeight;
+          })
+          .catch((error) => console.error('Error:', error));
+      }
+
+      // Allow pressing "Enter" on the keyboard to send the message
+      document
+        .getElementById('user-input')
+        .addEventListener('keypress', function (event) {
+          if (event.key === 'Enter') {
+            sendMessage();
+          }
+        });
+    </script>
+  </body>
+</html>

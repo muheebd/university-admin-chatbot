@@ -6,52 +6,42 @@ import re
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-# 1. Load the Trained Model
-print("Loading model...")
-model = load_model("chatbot_model.h5")
+# 1. Load the Advanced AI Brain
+print("Loading Advanced AI Model with Attention Mechanism...")
+model = load_model("advanced_chatbot_model.h5")
 
-# 2. Load Tokenizer, Classes, and Max Length
+# 2. Load Tokenizer and Classes
 with open("tokenizer.pickle", "rb") as handle:
     saved_data = pickle.load(handle)
     tokenizer = saved_data['tokenizer']
     classes = saved_data['classes']
     max_length = saved_data['max_length']
 
-# 3. Load Intents JSON for the text responses
+# 3. Load Intents JSON
 with open("intents.json") as file:
     data = json.load(file)
 
-# --------------------------------------------------------
-# 🛡️ CYBER SECURITY FEATURE: Input Sanitization
-# Prevents script injection or basic terminal-breaking inputs
-# --------------------------------------------------------
+# 4. Input Sanitization Filter
 def sanitize_input(text):
-    # Removes special characters, keeping only words and basic punctuation
-    clean_text = re.sub(r'[^a-zA-Z0-9\s\?\.,\']', '', text)
-    return clean_text
+    return re.sub(r'[^a-zA-Z0-9\s\?\.,\']', '', text)
 
-# --------------------------------------------------------
-# 🧠 DEEP LEARNING LOGIC: Predict with Confidence Score
-# --------------------------------------------------------
+# 5. Deep Learning Prediction Logic
 def chat_response(text):
-    # Sanitize user input first
     clean_text = sanitize_input(text)
     
     if not clean_text.strip():
         return "Please enter a valid question."
 
-    # Process text for the LSTM model
+    # Convert words to numbers
     seq = tokenizer.texts_to_sequences([clean_text])
     padded = pad_sequences(seq, padding='post', maxlen=max_length)
     
-    # Predict probabilities
+    # Predict using the attention model
     pred = model.predict(padded, verbose=0)[0]
-    
-    # Get highest probability and its corresponding class index
     tag_idx = np.argmax(pred)
     confidence = pred[tag_idx]
     
-    # Confidence Threshold (60%)
+    # Only answer if more than 60% confident
     if confidence > 0.60:
         tag = classes[tag_idx]
         for intent in data['intents']:
@@ -60,9 +50,9 @@ def chat_response(text):
     else:
         return "I am not entirely sure about that. Could you rephrase your question or contact the administrative office?"
 
-# 4. The Chat Loop
+# 6. The Chat Loop
 print("\n=======================================================")
-print("🛡️ Al-Hikmah University Secure Administrative Bot Ready!")
+print("🎓 Advanced Al-Hikmah Admin Bot (Attention-Enabled) Ready!")
 print("=======================================================")
 print("Type 'quit' to exit.\n")
 
