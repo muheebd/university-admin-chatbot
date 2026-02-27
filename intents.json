@@ -2,16 +2,61 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good afternoon"],
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "Howdy",
+        "Greetings",
+        "Hi there",
+        "Hello there",
+        "Hey bot",
+        "Good day",
+        "Sup",
+        "Hiya",
+        "Morning",
+        "Afternoon",
+        "Is anyone there?",
+        "Hello admin bot",
+        "Start"
+      ],
       "responses": [
         "Hello! How can I help you with Al-Hikmah University today?",
-        "Hi there! What information do you need about Al-Hikmah University?"
+        "Hi there! What information do you need about Al-Hikmah University?",
+        "Good day! I am the Al-Hikmah Admin Bot. How can I assist you?",
+        "Hello! Ask me anything about admissions, fees, results, or university services."
       ]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you", "Goodbye", "Quit"],
-      "responses": ["Goodbye! Have a great day!", "See you later!"]
+      "patterns": [
+        "Bye",
+        "See you",
+        "Goodbye",
+        "Quit",
+        "Exit",
+        "I am done",
+        "Talk later",
+        "Catch you later",
+        "I have to go now",
+        "Thanks bye",
+        "Thank you bye",
+        "That will be all",
+        "Close",
+        "Done",
+        "No more questions",
+        "I am good now",
+        "Thanks for your help",
+        "Alright thanks"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you later! Feel free to return if you have more questions.",
+        "Take care! The Al-Hikmah Admin Bot is always here to help."
+      ]
     },
     {
       "tag": "admissions_requirements",
@@ -19,10 +64,27 @@
         "What are the admission requirements?",
         "How can I get admitted?",
         "Admission criteria",
-        "Entry requirements"
+        "Entry requirements",
+        "What do I need to apply?",
+        "Can I get admitted without mathematics?",
+        "What are the entry qualifications?",
+        "How many O level credits do I need?",
+        "What subjects are required for admission?",
+        "I want to gain admission",
+        "How to apply for admission",
+        "Admission requirements for Al-Hikmah",
+        "What is the cut off mark?",
+        "Is JAMB required?",
+        "Do I need post UTME?",
+        "What is the minimum JAMB score?",
+        "Can I apply with awaiting result?",
+        "Direct entry requirements",
+        "What are the conditions for admission?",
+        "How does admission work here?"
       ],
       "responses": [
-        "Applicants must have at least five O'level credits including Mathematics and English. Some courses may have additional requirements."
+        "Applicants must have at least five O'level credits including Mathematics and English. Some courses may have additional requirements.",
+        "To gain admission into Al-Hikmah University, you need a minimum of five O'level credits including English and Mathematics, a valid JAMB score, and must pass the post-UTME screening. Some programmes have specific subject requirements."
       ]
     },
     {
@@ -31,10 +93,27 @@
         "What courses are offered?",
         "List of courses",
         "Programs available",
-        "Departments and courses"
+        "Departments and courses",
+        "What faculties are available?",
+        "Do you offer engineering?",
+        "What can I study at the university?",
+        "Which departments are in the university?",
+        "Tell me about the available programmes",
+        "What is the best course to study?",
+        "Is computer science available?",
+        "Does the university offer medicine?",
+        "What programmes does Al-Hikmah offer?",
+        "Is law available?",
+        "What are the science courses?",
+        "List all departments",
+        "Which faculties exist in the school?",
+        "I want to study cyber security",
+        "Is nursing science offered here?",
+        "What courses can I study?"
       ],
       "responses": [
-        "You can find all the courses and programs on the university website. They include programs in Sciences, Arts, and Engineering."
+        "Al-Hikmah University offers programmes across multiple faculties including Computing and Engineering, Health Sciences, Law, Management Sciences, Natural Sciences, Education, Humanities, Nursing Sciences, and Agriculture. Visit the university website for the full list of programmes.",
+        "The university offers courses in Computer Science, Cyber Security, Software Engineering, Medicine, Nursing, Law, Accounting, Economics, and many more. Check the official website for a complete listing."
       ]
     },
     {
@@ -42,10 +121,28 @@
       "patterns": [
         "How do I register for courses?",
         "Course registration process",
-        "Register for classes"
+        "Register for classes",
+        "When does course registration open?",
+        "I need to add a course",
+        "How do I enrol for my subjects?",
+        "Where do I register my courses?",
+        "Steps to complete my course registration",
+        "I have not registered my courses yet",
+        "My course registration is not complete",
+        "How to do course reg",
+        "Course reg portal",
+        "When is the deadline for course registration?",
+        "Can I register courses after the deadline?",
+        "Registration is not opening for me",
+        "Why can't I register my courses?",
+        "I want to drop a course",
+        "How do I add an extra unit?",
+        "Course registration is blocked",
+        "Portal not allowing registration"
       ],
       "responses": [
-        "Course registration is done through the student portal. Make sure your prerequisites and payments are complete."
+        "Course registration is done through the student portal. Make sure your school fees are fully paid and your account is cleared before attempting to register.",
+        "To register your courses, log into the student portal, navigate to Course Registration, and select your courses for the semester. Ensure your fee payment is complete first or the portal will block you."
       ]
     },
     {
@@ -53,10 +150,28 @@
       "patterns": [
         "What are the school fees?",
         "Tuition fees",
-        "Payment information"
+        "Payment information",
+        "How much does the school cost?",
+        "What is the cost of studying here?",
+        "How do I pay my school fees?",
+        "When is the deadline for fee payment?",
+        "What is the fee breakdown?",
+        "How much is the acceptance fee?",
+        "How much is the school fees for 400 level?",
+        "Is fees the same for all departments?",
+        "What is the sundry fee?",
+        "Medical school fees",
+        "Law school fees",
+        "How do I generate a payment invoice?",
+        "Which bank do I pay school fees?",
+        "Can I pay in installments?",
+        "Fee payment portal",
+        "How to pay on Remita",
+        "What happens if I don't pay on time?"
       ],
       "responses": [
-        "Tuition fees vary by program. You can view the detailed fee structure on your student portal."
+        "Tuition fees vary by programme and faculty. You can view the detailed fee structure and generate your invoice on your student portal.",
+        "School fees at Al-Hikmah University differ by department. Health Sciences and Law programmes generally have higher fees. Log into the student portal to see your specific fee schedule and payment options."
       ]
     },
     {
@@ -64,10 +179,28 @@
       "patterns": [
         "How to apply for hostel?",
         "Hostel information",
-        "Student housing"
+        "Student housing",
+        "Is accommodation available on campus?",
+        "How do I get a bed space?",
+        "When does hostel application open?",
+        "Can I apply for a room on campus?",
+        "Tell me about student accommodation",
+        "How much is hostel fee?",
+        "Is there a male hostel?",
+        "Is there a female hostel?",
+        "How many students per room?",
+        "Is hostel compulsory?",
+        "Can I live off campus?",
+        "Hostel allocation process",
+        "I did not get hostel space",
+        "Hostel application deadline",
+        "Which hostel is the best?",
+        "How do I know if I got a room?",
+        "Is there hostel for postgraduate students?"
       ],
       "responses": [
-        "You can apply for hostel accommodation via the student services section on the portal. Apply early due to limited rooms."
+        "You can apply for hostel accommodation via the student services section on the student portal. Apply early as spaces are limited.",
+        "Al-Hikmah University has both male and female hostels on campus. Applications are done online through the portal. Hostel fees vary by room type. Due to high demand, early application is strongly advised."
       ]
     },
     {
@@ -76,10 +209,27 @@
         "Academic calendar",
         "Semester dates",
         "Exams schedule",
-        "Holidays"
+        "Holidays",
+        "When does the semester start?",
+        "What is the resumption date?",
+        "When are the exams?",
+        "What are the semester break dates?",
+        "When is first semester?",
+        "When is second semester?",
+        "When does school resume?",
+        "When is the next break?",
+        "Is there school on Monday?",
+        "What day does the semester end?",
+        "Exam timetable",
+        "When is convocation?",
+        "When does registration close?",
+        "Is there a mid-semester break?",
+        "Second semester start date",
+        "When is SUG week?"
       ],
       "responses": [
-        "The academic calendar, including semester dates and exam periods, is published on the university website."
+        "The academic calendar including semester start dates, exam periods, and holidays is published on the Al-Hikmah University official website.",
+        "For exam timetables, resumption dates, and semester schedules, please check the university website or your departmental notice board as these are updated each session."
       ]
     },
     {
@@ -88,10 +238,27 @@
         "Scholarships available",
         "Financial aid",
         "Bursaries",
-        "Grants"
+        "Grants",
+        "Can I get a scholarship?",
+        "How do I apply for financial support?",
+        "Is there any fee waiver for students?",
+        "What funding opportunities are available?",
+        "How can I reduce my tuition cost?",
+        "I cannot afford school fees",
+        "Is there any government scholarship?",
+        "TETFUND scholarship",
+        "State government scholarship",
+        "Merit scholarship at Al-Hikmah",
+        "Who qualifies for scholarship?",
+        "What is the GPA required for scholarship?",
+        "Vice chancellor scholarship",
+        "Scholarship for first class students",
+        "Scholarship application form",
+        "When is scholarship application deadline?"
       ],
       "responses": [
-        "Al-Hikmah University offers scholarships for eligible students. Check the student portal for application details."
+        "Al-Hikmah University offers scholarships for eligible students based on academic merit and financial need. Check the student portal or visit the Bursary office for application details.",
+        "Scholarship opportunities include institutional merit-based awards and external government scholarships. Visit the student affairs office or the portal for current available scholarships and their requirements."
       ]
     },
     {
@@ -100,10 +267,27 @@
         "University contact",
         "Phone number",
         "Email",
-        "How can I reach the university?"
+        "How can I reach the university?",
+        "What is the university address?",
+        "How do I get in touch with the school?",
+        "Can I call the admissions office?",
+        "What is the official email?",
+        "Where is the university located?",
+        "How to contact admin office",
+        "Registrar contact",
+        "Bursary office phone number",
+        "Student affairs contact",
+        "ICT department contact",
+        "How do I report a problem?",
+        "Who do I call for admission issues?",
+        "Contact for result issues",
+        "Dean of students contact",
+        "How do I send a complaint?",
+        "Directorate of academics contact"
       ],
       "responses": [
-        "You can contact Al-Hikmah University at info@alhikmah.edu.ng or check the website for departmental phone numbers."
+        "You can contact Al-Hikmah University at info@alhikmah.edu.ng or visit the official website for departmental contact numbers and office addresses.",
+        "Al-Hikmah University is located in Ilorin, Kwara State, Nigeria. For specific departmental contacts including the Registrar, Bursary, or Student Affairs, please check the official university website."
       ]
     },
     {
@@ -113,7 +297,22 @@
         "What is my fee balance?",
         "Do I have an outstanding payment?",
         "Check my tuition balance",
-        "Why did my enrolment fail?"
+        "Why did my enrolment fail?",
+        "Am I owing any fees?",
+        "What is my tuition balance?",
+        "How much have I paid so far?",
+        "Is my school fees complete?",
+        "Why was my portal blocked?",
+        "My portal is blocked",
+        "I cannot register because of fees",
+        "How much do I still owe?",
+        "Check my clearance status",
+        "Am I cleared?",
+        "Is my payment complete?",
+        "What is my outstanding balance?",
+        "How much is remaining on my fees?",
+        "My account shows outstanding balance",
+        "I paid but portal still shows owing"
       ],
       "responses": ["ACTION_AUTH_REQUIRED"]
     },
@@ -124,7 +323,22 @@
         "Payment history",
         "Did my sundry fee payment go through?",
         "Get my payment receipt",
-        "Print my receipt"
+        "Print my receipt",
+        "Show me my payment records",
+        "I want to see my past transactions",
+        "Was my last payment successful?",
+        "I need proof of payment",
+        "Can I get my fee receipt?",
+        "I paid but it is not reflecting",
+        "My Remita payment did not reflect",
+        "Payment confirmation",
+        "I need my receipt number",
+        "What is my receipt number?",
+        "Show me my transaction history",
+        "Did my bank transfer go through?",
+        "Payment not confirmed",
+        "Resend my receipt",
+        "I lost my receipt"
       ],
       "responses": ["ACTION_AUTH_REQUIRED"]
     },
@@ -135,7 +349,22 @@
         "Check my course registration",
         "Extra unit registration status",
         "List my courses",
-        "Did they approve my extra unit?"
+        "Did they approve my extra unit?",
+        "Show me my registered courses",
+        "Which subjects am I taking this semester?",
+        "What units am I enrolled in?",
+        "Was my course registration successful?",
+        "How many units am I offering?",
+        "I want to see my course list",
+        "My courses are not showing",
+        "I registered but courses not reflecting",
+        "Check my units",
+        "How many courses did I register?",
+        "Show me my semester courses",
+        "Did my course registration go through?",
+        "Confirm my course registration",
+        "What is my total unit load?",
+        "My extra unit was not approved"
       ],
       "responses": ["ACTION_AUTH_REQUIRED"]
     },
@@ -146,7 +375,22 @@
         "What is my room number?",
         "Check my accommodation status",
         "Hostel allocation",
-        "Where is my bed space?"
+        "Where is my bed space?",
+        "Was I given a hostel room?",
+        "Which hostel am I in?",
+        "What is my room allocation?",
+        "Did I get a bed space this semester?",
+        "Where am I staying on campus?",
+        "Check my hostel allocation",
+        "My room number",
+        "Which block am I in?",
+        "I want to know my hostel",
+        "Was I allocated accommodation?",
+        "Did the hostel portal confirm my room?",
+        "I applied for hostel but do not know my room",
+        "What hostel was I assigned?",
+        "My accommodation details",
+        "Confirm my room allocation"
       ],
       "responses": ["ACTION_AUTH_REQUIRED"]
     },
@@ -157,7 +401,22 @@
         "Check my results",
         "What was my GPA last semester?",
         "Semester grades",
-        "Did my results drop?"
+        "Did my results drop?",
+        "How did I perform last semester?",
+        "What is my grade point average?",
+        "Show me my academic performance",
+        "What is my cumulative GPA?",
+        "Did I pass all my courses?",
+        "I want to see my results",
+        "My CGPA this semester",
+        "Did I make first class?",
+        "Am I on probation?",
+        "Check my grades",
+        "What is my current standing?",
+        "Did I fail any course?",
+        "My result is not showing",
+        "Second semester result",
+        "Check my academic record"
       ],
       "responses": ["ACTION_AUTH_REQUIRED"]
     }

@@ -1,0 +1,155 @@
+{
+  "_note": "This file contains HELD-OUT test patterns. These phrases were NOT used during model training. Used exclusively by evaluate.py to measure real generalization performance.",
+  "intents": [
+    {
+      "tag": "greeting",
+      "test_patterns": [
+        "Howdy",
+        "Good evening",
+        "Greetings",
+        "Hi there",
+        "What's up"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "test_patterns": [
+        "I'm done",
+        "Talk later",
+        "Catch you later",
+        "I have to go now",
+        "Thanks, bye"
+      ]
+    },
+    {
+      "tag": "admissions_requirements",
+      "test_patterns": [
+        "What do I need to apply?",
+        "Can I get admitted without mathematics?",
+        "What are the entry qualifications?",
+        "How many O'level credits do I need?",
+        "What subjects are required for admission?"
+      ]
+    },
+    {
+      "tag": "courses",
+      "test_patterns": [
+        "What faculties are available?",
+        "Do you offer engineering?",
+        "What can I study at the university?",
+        "Which departments are in the university?",
+        "Tell me about the available programmes"
+      ]
+    },
+    {
+      "tag": "registration",
+      "test_patterns": [
+        "When does course registration open?",
+        "I need to add a course",
+        "How do I enrol for my subjects?",
+        "Where do I register my courses?",
+        "Steps to complete my course registration"
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "How much does the school cost?",
+        "What is the cost of studying here?",
+        "How do I pay my school fees?",
+        "When is the deadline for fee payment?",
+        "What is the fee breakdown for my programme?"
+      ]
+    },
+    {
+      "tag": "hostel",
+      "test_patterns": [
+        "Is accommodation available on campus?",
+        "How do I get a bed space?",
+        "When does hostel application open?",
+        "Can I apply for a room on campus?",
+        "Tell me about student accommodation"
+      ]
+    },
+    {
+      "tag": "academic_calendar",
+      "test_patterns": [
+        "When does the semester start?",
+        "What is the resumption date?",
+        "When are the exams?",
+        "What are the semester break dates?",
+        "Is there a public holiday next week?"
+      ]
+    },
+    {
+      "tag": "scholarship",
+      "test_patterns": [
+        "Can I get a scholarship?",
+        "How do I apply for financial support?",
+        "Is there any fee waiver for students?",
+        "What funding opportunities are available?",
+        "How can I reduce my tuition cost?"
+      ]
+    },
+    {
+      "tag": "contact",
+      "test_patterns": [
+        "What is the university address?",
+        "How do I get in touch with the school?",
+        "Can I call the admissions office?",
+        "What is the official email of the university?",
+        "Where is the university located?"
+      ]
+    },
+    {
+      "tag": "check_fees",
+      "test_patterns": [
+        "Am I owing any fees?",
+        "What is my tuition balance?",
+        "How much have I paid so far?",
+        "Is my school fees complete?",
+        "Why was my portal blocked?"
+      ]
+    },
+    {
+      "tag": "check_payment_history",
+      "test_patterns": [
+        "Show me my payment records",
+        "I want to see my past transactions",
+        "Was my last payment successful?",
+        "I need proof of payment",
+        "Can I get my fee receipt?"
+      ]
+    },
+    {
+      "tag": "check_courses",
+      "test_patterns": [
+        "Show me my registered courses",
+        "Which subjects am I taking this semester?",
+        "What units am I enrolled in?",
+        "Was my course registration successful?",
+        "How many units am I offering?"
+      ]
+    },
+    {
+      "tag": "check_accommodation",
+      "test_patterns": [
+        "Was I given a hostel room?",
+        "Which hostel am I in?",
+        "What is my room allocation?",
+        "Did I get a bed space this semester?",
+        "Where am I staying on campus?"
+      ]
+    },
+    {
+      "tag": "check_results",
+      "test_patterns": [
+        "How did I perform last semester?",
+        "What is my grade point average?",
+        "Show me my academic performance",
+        "What is my cumulative GPA?",
+        "Did I pass all my courses?"
+      ]
+    }
+  ]
+}
