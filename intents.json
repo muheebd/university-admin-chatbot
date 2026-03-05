@@ -83,8 +83,8 @@
         "How does admission work here?"
       ],
       "responses": [
-        "Applicants must have at least five O'level credits including Mathematics and English. Some courses may have additional requirements.",
-        "To gain admission into Al-Hikmah University, you need a minimum of five O'level credits including English and Mathematics, a valid JAMB score, and must pass the post-UTME screening. Some programmes have specific subject requirements."
+        "To gain admission into Al-Hikmah University, you need: (1) A minimum of five O'level credits including English Language and Mathematics at not more than two sittings. (2) A valid JAMB UTME score \u2014 the minimum cut-off mark is typically 160, though competitive programmes like Medicine and Law require higher scores. (3) A pass in the Al-Hikmah University Post-UTME screening exercise. Additional subject requirements apply per programme \u2014 for example, Medicine requires Biology, Chemistry and Physics, while Law requires Literature or Government. Direct Entry applicants must have an OND, NCE, HND or A-Level qualifications in relevant subjects.",
+        "Admission requirements at Al-Hikmah University include five O'level credits (including English and Mathematics), a valid JAMB score, and passing the Post-UTME screening. Medicine, Nursing and Law programmes have stricter subject and score requirements. Visit the Admissions Office or the university website to confirm requirements for your specific programme."
       ]
     },
     {
@@ -112,8 +112,8 @@
         "What courses can I study?"
       ],
       "responses": [
-        "Al-Hikmah University offers programmes across multiple faculties including Computing and Engineering, Health Sciences, Law, Management Sciences, Natural Sciences, Education, Humanities, Nursing Sciences, and Agriculture. Visit the university website for the full list of programmes.",
-        "The university offers courses in Computer Science, Cyber Security, Software Engineering, Medicine, Nursing, Law, Accounting, Economics, and many more. Check the official website for a complete listing."
+        "Al-Hikmah University offers programmes across 10 Faculties: (1) Faculty of Computing, Engineering and Technology \u2014 Computer Science, Cyber Security, Software Engineering, Information Systems. (2) College of Health Sciences \u2014 Medicine (MB;BS). (3) Faculty of Health Sciences \u2014 Public Health, Medical Laboratory Science, Human Anatomy, Human Physiology. (4) Faculty of Nursing Sciences \u2014 Nursing Science. (5) Faculty of Law \u2014 Common Law, Common and Islamic Law. (6) Faculty of Management Sciences \u2014 Accounting, Banking and Finance, Business Administration, Economics. (7) Faculty of Humanities and Social Sciences \u2014 English, Arabic, Mass Communication, Political Science, Sociology, History. (8) Faculty of Education \u2014 Educational Management, Computer Science Education, Library Science. (9) Faculty of Natural and Applied Sciences \u2014 Microbiology, Biochemistry, Industrial Chemistry, Geology, Physics, Statistics. (10) Faculty of Agriculture \u2014 Agriculture. Visit the university website for the full programme list and entry requirements.",
+        "Al-Hikmah University has programmes in Computing and Technology, Medicine, Nursing, Law, Management Sciences, Natural Sciences, Humanities, Education, and Agriculture. Popular courses include Computer Science, Cyber Security, Medicine (MB;BS), Law, Accounting, and Nursing Science. Visit the official website at alhikmah.edu.ng for the complete list."
       ]
     },
     {
@@ -141,8 +141,8 @@
         "Portal not allowing registration"
       ],
       "responses": [
-        "Course registration is done through the student portal. Make sure your school fees are fully paid and your account is cleared before attempting to register.",
-        "To register your courses, log into the student portal, navigate to Course Registration, and select your courses for the semester. Ensure your fee payment is complete first or the portal will block you."
+        "To register your courses at Al-Hikmah University: (1) Ensure your school fees are fully paid and your portal is cleared. (2) Log into the student portal at the university website. (3) Navigate to Course Registration and select your courses for the current semester. (4) Ensure you do not exceed your maximum unit load \u2014 typically 24 units per semester. (5) Submit and print your course registration form for your records. Note: You cannot register if you have an outstanding fee balance or a carry-over debt. Visit the Academic Affairs office if you encounter any issues.",
+        "Course registration is done online through the Al-Hikmah student portal. You must clear all outstanding fees before the portal allows registration. Select your courses carefully \u2014 ensure you include compulsory courses and do not exceed your unit limit. Registration deadlines are published in the academic calendar. Late registration attracts a penalty fee."
       ]
     },
     {
@@ -170,8 +170,8 @@
         "What happens if I don't pay on time?"
       ],
       "responses": [
-        "Tuition fees vary by programme and faculty. You can view the detailed fee structure and generate your invoice on your student portal.",
-        "School fees at Al-Hikmah University differ by department. Health Sciences and Law programmes generally have higher fees. Log into the student portal to see your specific fee schedule and payment options."
+        "School fees at Al-Hikmah University vary by faculty and programme. As a general guide: Medicine (MB;BS) \u2014 approximately \u20a61,200,000 to \u20a61,800,000 per session. Law and Health Sciences \u2014 approximately \u20a61,000,000 to \u20a61,500,000. Computing and Engineering \u2014 approximately \u20a6600,000 to \u20a6850,000. Humanities and Management Sciences \u2014 approximately \u20a6450,000 to \u20a6600,000. Fees are paid via the Remita platform \u2014 log into your student portal to generate your invoice and make payment. Fees must be paid in full before course registration opens.",
+        "Al-Hikmah University fees differ by department. To pay: (1) Log into your student portal. (2) Go to Fee Payment and generate your invoice. (3) Pay via Remita using your bank, mobile banking, or POS. (4) Your portal will be cleared automatically once payment is confirmed. For fee enquiries, contact the Bursary office directly."
       ]
     },
     {
@@ -199,8 +199,8 @@
         "Is there hostel for postgraduate students?"
       ],
       "responses": [
-        "You can apply for hostel accommodation via the student services section on the student portal. Apply early as spaces are limited.",
-        "Al-Hikmah University has both male and female hostels on campus. Applications are done online through the portal. Hostel fees vary by room type. Due to high demand, early application is strongly advised."
+        "Hostel accommodation at Al-Hikmah University is not compulsory but is available for interested students. The university has separate male and female hostels on campus. To apply: (1) Log into your student portal. (2) Navigate to Hostel Application under Student Services. (3) Select your preferred hostel type and submit. (4) Pay the hostel fee once allocated \u2014 hostel fees are separate from tuition fees. Hostel spaces are limited and allocated on a first-come, first-served basis, so apply as early as possible at the start of each session. Students who do not get hostel can live off-campus in the university community.",
+        "Hostel at Al-Hikmah University is optional \u2014 students can choose to live on campus or off campus. On-campus hostels include male and female blocks with shared facilities. Application is done through the student portal at the beginning of each session. Due to high demand, early application is strongly advised. Contact the Student Affairs office for hostel availability and fee details."
       ]
     },
     {
@@ -254,11 +254,20 @@
         "Vice chancellor scholarship",
         "Scholarship for first class students",
         "Scholarship application form",
-        "When is scholarship application deadline?"
+        "When is scholarship application deadline?",
+        "Are there scholarships available?",
+        "scholarship opportunities",
+        "can I get financial aid",
+        "bursary available",
+        "scholarship application",
+        "how to apply for scholarship",
+        "merit based scholarship",
+        "does the school offer bursary",
+        "scholarship for students"
       ],
       "responses": [
-        "Al-Hikmah University offers scholarships for eligible students based on academic merit and financial need. Check the student portal or visit the Bursary office for application details.",
-        "Scholarship opportunities include institutional merit-based awards and external government scholarships. Visit the student affairs office or the portal for current available scholarships and their requirements."
+        "Al-Hikmah University does not currently offer scholarships or bursaries. However, students may explore external funding options such as the Federal Government Scholarship Board, Kwara State Government Scholarship, TETFUND, and other private foundation grants. Contact the Student Affairs office for guidance on external funding opportunities.",
+        "There are no scholarships currently offered by Al-Hikmah University. Students seeking financial support are advised to apply for external scholarships through the Federal Government, Kwara State Government, or TETFUND. Visit the Student Affairs office for more information."
       ]
     },
     {

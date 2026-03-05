@@ -254,8 +254,46 @@ def create_mock_database():
         
         # Insert Results
         cgpa = round(random.uniform(2.0, 4.9), 2)
+        gpa  = round(random.uniform(max(1.5, cgpa - 0.5), min(5.0, cgpa + 0.5)), 2)
         cursor.execute('INSERT INTO results (matric_no, session, semester, gpa, cgpa) VALUES (?, ?, ?, ?, ?)', 
-                       (matric_no, '2024/2025', '2nd Semester', cgpa, cgpa))
+                       (matric_no, '2024/2025', '2nd Semester', gpa, cgpa))
+
+        # Insert Course Registration (2-5 courses per student)
+        course_pool = [
+            ('GST101', 'Use of English', 2), ('GST102', 'Nigerian Peoples and Culture', 2),
+            ('CSC201', 'Introduction to Programming', 3), ('CSC301', 'Data Structures', 3),
+            ('CYB301', 'Network Security', 3), ('SEN201', 'Software Engineering Principles', 3),
+            ('ACC201', 'Financial Accounting', 3), ('ECO201', 'Microeconomics', 3),
+            ('LAW201', 'Law of Contract', 4), ('MCB301', 'Microbiology Techniques', 3),
+            ('PUH201', 'Public Health Fundamentals', 3), ('NSC301', 'Nursing Practice', 4),
+            ('AGR201', 'Crop Science', 3), ('ENG201', 'Literature in English', 3),
+            ('PHY201', 'Human Physiology I', 3), ('BUS301', 'Business Management', 3),
+        ]
+        num_courses = random.randint(2, 5)
+        chosen = random.sample(course_pool, num_courses)
+        for (c_code, c_title, c_units) in chosen:
+            cursor.execute('''
+                INSERT INTO course_registration (matric_no, course_code, course_title, units, semester, session, extra_unit_status)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+            ''', (matric_no, c_code, c_title, c_units, '1st Semester', '2025/2026', 'N/A'))
+
+        # Insert Accommodation (70% of students get hostel, 30% do not)
+        hostels = [
+            ('Male Hostel A', 'Block A'), ('Male Hostel B', 'Block B'),
+            ('Female Hostel A', 'Block C'), ('Female Hostel D', 'Block D')
+        ]
+        if random.random() < 0.70:
+            hostel = random.choice(hostels)
+            room = f"Room {random.randint(1, 50)}{random.choice(['A','B','C'])}"
+            cursor.execute('''
+                INSERT INTO accommodation (matric_no, hostel_name, room_number, status)
+                VALUES (?, ?, ?, ?)
+            ''', (matric_no, hostel[0], room, 'Allocated'))
+        else:
+            cursor.execute('''
+                INSERT INTO accommodation (matric_no, hostel_name, room_number, status)
+                VALUES (?, ?, ?, ?)
+            ''', (matric_no, 'N/A', 'N/A', 'Not Allocated - Apply on the portal'))
 
     # Commit changes and close
     conn.commit()

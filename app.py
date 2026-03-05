@@ -41,18 +41,41 @@ def handle_database_action(action_tag, matric_no):
     elif action_tag == "check_results":
         result = query_db('SELECT * FROM results WHERE matric_no = ? ORDER BY session DESC LIMIT 1', [matric_no], one=True)
         if result:
-            return f"For the {result['session']} {result['semester']}, your GPA was {result['gpa']}. Your current Cumulative CGPA is {result['cgpa']}."
+            cgpa = result['cgpa']
+            if cgpa >= 4.5:
+                standing = "First Class 🏆"
+            elif cgpa >= 3.5:
+                standing = "Second Class Upper"
+            elif cgpa >= 2.4:
+                standing = "Second Class Lower"
+            elif cgpa >= 1.5:
+                standing = "Third Class"
+            else:
+                standing = "on Academic Probation ⚠️ — please see your academic advisor immediately"
+            return (f"For the {result['session']} {result['semester']}, your GPA was {result['gpa']}. "
+                    f"Your Cumulative CGPA is {cgpa} ({standing}).")
+        return "No result record found for your account. Please contact the Academic Affairs office."
 
     elif action_tag == "check_accommodation":
         hostel = query_db('SELECT * FROM accommodation WHERE matric_no = ?', [matric_no], one=True)
         if hostel:
-            return f"Your accommodation status: {hostel['status']}. You are assigned to {hostel['hostel_name']}, {hostel['room_number']}."
-            
+            if hostel['status'] == 'Allocated':
+                return (f"Accommodation Status: Allocated ✅. "
+                        f"You are assigned to {hostel['hostel_name']}, {hostel['room_number']}.")
+            else:
+                return ("Accommodation Status: Not Allocated. "
+                        "You currently do not have a room on campus. "
+                        "Log into your student portal and apply under Student Services. "
+                        "Spaces are limited so apply as soon as possible.")
+        return "No accommodation record found. Please visit the Student Affairs office."
+
     elif action_tag == "check_courses":
         courses = query_db('SELECT * FROM course_registration WHERE matric_no = ?', [matric_no])
         if courses:
             course_list = ", ".join([c['course_code'] for c in courses])
-            return f"You are currently registered for: {course_list}."
+            total_units = sum([c['units'] for c in courses])
+            return (f"You are currently registered for {len(courses)} course(s): {course_list}. "
+                    f"Total units: {total_units}.")
 
     elif action_tag == "check_payment_history":
         payment = query_db('SELECT * FROM payments_history WHERE matric_no = ? ORDER BY date DESC LIMIT 1', [matric_no], one=True)
@@ -83,7 +106,9 @@ def get_bot_response(user_text):
                 
                 # Execute the database query they originally asked for
                 data_response = handle_database_action(pending_action, matric_no)
-                return f"Login successful, {student['full_name']}. {data_response}"
+                return (f"Login successful, {student['full_name']}. "
+                        f"[PROFILE: {matric_no} | {student['department']} | Level {student['level']}] "
+                        f"{data_response}")
             else:
                 return "Authentication failed. Invalid Matric Number or PIN. Please try again or ask another question."
         else:
