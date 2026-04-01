@@ -711,7 +711,11 @@
 
     const bubble = document.createElement('div');
     bubble.className = 'message ' + (isBot ? 'bot-msg' : 'user-msg');
-    bubble.textContent = text;
+    if (isBot) {
+      bubble.innerHTML = text;  // allow HTML tables in bot responses
+    } else {
+      bubble.textContent = text;
+    }
 
     const ts = document.createElement('div');
     ts.className = 'msg-time';
@@ -753,6 +757,8 @@
       // Strip hidden profile tag before displaying
       const cleanReply = data.reply.replace(/\[PROFILE:.*?\]\s*/g, '');
       appendMessage(cleanReply, 'bot');
+      // scroll after table renders
+      setTimeout(() => { document.getElementById('chat-box').scrollTop = 99999; }, 100);
       handleLoginState(message, data.reply);
     })
     .catch(() => {
